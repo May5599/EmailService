@@ -1,0 +1,34 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model EmailJob {
+  id          Int       @id @default(autoincrement())
+  to          String    // Recipient email
+  subject     String    // Email subject
+  html        String    // Email content
+  status      String    // Status (pending, sent, failed)
+  createdAt   DateTime  @default(now())  // Date when the email job was created
+  updatedAt   DateTime  @updatedAt       // Date when the job was last updated
+  analytics   Analytics[]  // Relation with Analytics model
+  dayOfWeek   String?   // Day of the week for weekly recurrence (e.g., 'Monday')
+  timeOfDay   String?   // Time of the day in 'HH:mm' format for weekly recurrence
+}
+enum EventType {
+  OPEN
+  CLICK
+}
+
+model Analytics {
+  id        Int       @id @default(autoincrement())
+  emailId   Int       // Foreign key to EmailJob
+  event     EventType // Event type (open, click)
+  timestamp DateTime  @default(now())  // Timestamp of the event
+
+  emailJob  EmailJob  @relation(fields: [emailId], references: [id])  // Relation to EmailJob
+}
