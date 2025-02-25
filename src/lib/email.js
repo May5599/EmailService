@@ -1,5 +1,5 @@
-import { PrismaClient } from '@prisma/client';
 import nodemailer from 'nodemailer';
+import { PrismaClient } from '@prisma/client';
 
 const prisma = new PrismaClient();
 
@@ -7,8 +7,8 @@ const prisma = new PrismaClient();
 const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-    user: process.env.EMAIL_USER,
-    pass: process.env.EMAIL_PASS,
+    user: process.env.EMAIL_USER,  // Your Gmail account
+    pass: process.env.EMAIL_PASS,  // Your Gmail app password
   },
 });
 
@@ -24,7 +24,8 @@ export const sendEmail = async (to, subject, html) => {
       },
     });
 
-    const trackingPixel = `<img src="http://localhost:3000/api/track?emailId=${emailJob.id}&event=open" width="1" height="1" style="display:none;" />`;
+    // Construct the tracking pixel URL
+    const trackingPixel = `<img src="${process.env.BASE_URL}/api/track?emailId=${emailJob.id}&event=open" width="1" height="1" style="display:none;" />`;
     const emailContent = `${html} ${trackingPixel}`;
 
     // Send the email with the tracking pixel

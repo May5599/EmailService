@@ -66,15 +66,50 @@
 │   ├── @fastify
 │   │   └── busboy
 │   ├── @firebase
+│   │   ├── analytics
+│   │   ├── analytics-compat
+│   │   ├── analytics-types
+│   │   ├── app
+│   │   ├── app-check
+│   │   ├── app-check-compat
 │   │   ├── app-check-interop-types
+│   │   ├── app-check-types
+│   │   ├── app-compat
 │   │   ├── app-types
+│   │   ├── auth
+│   │   ├── auth-compat
 │   │   ├── auth-interop-types
+│   │   ├── auth-types
 │   │   ├── component
+│   │   ├── data-connect
 │   │   ├── database
 │   │   ├── database-compat
 │   │   ├── database-types
+│   │   ├── firestore
+│   │   ├── firestore-compat
+│   │   ├── firestore-types
+│   │   ├── functions
+│   │   ├── functions-compat
+│   │   ├── functions-types
+│   │   ├── installations
+│   │   ├── installations-compat
+│   │   ├── installations-types
 │   │   ├── logger
-│   │   └── util
+│   │   ├── messaging
+│   │   ├── messaging-compat
+│   │   ├── messaging-interop-types
+│   │   ├── performance
+│   │   ├── performance-compat
+│   │   ├── performance-types
+│   │   ├── remote-config
+│   │   ├── remote-config-compat
+│   │   ├── remote-config-types
+│   │   ├── storage
+│   │   ├── storage-compat
+│   │   ├── storage-types
+│   │   ├── util
+│   │   ├── vertexai
+│   │   └── webchannel-wrapper
 │   ├── @floating-ui
 │   │   ├── core
 │   │   ├── dom
@@ -1735,6 +1770,88 @@
 │   │   ├── license
 │   │   ├── package.json
 │   │   └── readme.md
+│   ├── firebase
+│   │   ├── README.md
+│   │   ├── analytics
+│   │   ├── app
+│   │   ├── app-check
+│   │   ├── auth
+│   │   ├── compat
+│   │   ├── data-connect
+│   │   ├── database
+│   │   ├── firebase-analytics-compat.js
+│   │   ├── firebase-analytics-compat.js.map
+│   │   ├── firebase-analytics.js
+│   │   ├── firebase-analytics.js.map
+│   │   ├── firebase-app-check-compat.js
+│   │   ├── firebase-app-check-compat.js.map
+│   │   ├── firebase-app-check.js
+│   │   ├── firebase-app-check.js.map
+│   │   ├── firebase-app-compat.js
+│   │   ├── firebase-app-compat.js.map
+│   │   ├── firebase-app.js
+│   │   ├── firebase-app.js.map
+│   │   ├── firebase-auth-compat.js
+│   │   ├── firebase-auth-compat.js.map
+│   │   ├── firebase-auth-cordova.js
+│   │   ├── firebase-auth-cordova.js.map
+│   │   ├── firebase-auth-web-extension.js
+│   │   ├── firebase-auth-web-extension.js.map
+│   │   ├── firebase-auth.js
+│   │   ├── firebase-auth.js.map
+│   │   ├── firebase-compat.js
+│   │   ├── firebase-compat.js.map
+│   │   ├── firebase-data-connect.js
+│   │   ├── firebase-data-connect.js.map
+│   │   ├── firebase-database-compat.js
+│   │   ├── firebase-database-compat.js.map
+│   │   ├── firebase-database.js
+│   │   ├── firebase-database.js.map
+│   │   ├── firebase-firestore-compat.js
+│   │   ├── firebase-firestore-compat.js.map
+│   │   ├── firebase-firestore-lite.js
+│   │   ├── firebase-firestore-lite.js.map
+│   │   ├── firebase-firestore.js
+│   │   ├── firebase-firestore.js.map
+│   │   ├── firebase-functions-compat.js
+│   │   ├── firebase-functions-compat.js.map
+│   │   ├── firebase-functions.js
+│   │   ├── firebase-functions.js.map
+│   │   ├── firebase-installations-compat.js
+│   │   ├── firebase-installations-compat.js.map
+│   │   ├── firebase-installations.js
+│   │   ├── firebase-installations.js.map
+│   │   ├── firebase-messaging-compat.js
+│   │   ├── firebase-messaging-compat.js.map
+│   │   ├── firebase-messaging-sw.js
+│   │   ├── firebase-messaging-sw.js.map
+│   │   ├── firebase-messaging.js
+│   │   ├── firebase-messaging.js.map
+│   │   ├── firebase-performance-compat.js
+│   │   ├── firebase-performance-compat.js.map
+│   │   ├── firebase-performance-standalone-compat.js
+│   │   ├── firebase-performance-standalone-compat.js.map
+│   │   ├── firebase-performance.js
+│   │   ├── firebase-performance.js.map
+│   │   ├── firebase-remote-config-compat.js
+│   │   ├── firebase-remote-config-compat.js.map
+│   │   ├── firebase-remote-config.js
+│   │   ├── firebase-remote-config.js.map
+│   │   ├── firebase-storage-compat.js
+│   │   ├── firebase-storage-compat.js.map
+│   │   ├── firebase-storage.js
+│   │   ├── firebase-storage.js.map
+│   │   ├── firebase-vertexai.js
+│   │   ├── firebase-vertexai.js.map
+│   │   ├── firestore
+│   │   ├── functions
+│   │   ├── installations
+│   │   ├── messaging
+│   │   ├── package.json
+│   │   ├── performance
+│   │   ├── remote-config
+│   │   ├── storage
+│   │   └── vertexai
 │   ├── firebase-admin
 │   │   ├── LICENSE
 │   │   ├── README.md
@@ -1996,6 +2113,19 @@
 │   │   ├── LICENSE
 │   │   ├── build
 │   │   └── package.json
+│   ├── googleapis
+│   │   ├── CHANGELOG.md
+│   │   ├── LICENSE
+│   │   ├── README.md
+│   │   ├── build
+│   │   └── package.json
+│   ├── googleapis-common
+│   │   ├── CHANGELOG.md
+│   │   ├── LICENSE
+│   │   ├── README.md
+│   │   ├── build
+│   │   ├── node_modules
+│   │   └── package.json
 │   ├── gopd
 │   │   ├── CHANGELOG.md
 │   │   ├── LICENSE
@@ -2140,6 +2270,15 @@
 │   │   ├── README.md
 │   │   ├── build
 │   │   └── package.json
+│   ├── idb
+│   │   ├── CHANGELOG.md
+│   │   ├── LICENSE
+│   │   ├── README.md
+│   │   ├── build
+│   │   ├── package.json
+│   │   ├── with-async-ittr.cjs
+│   │   ├── with-async-ittr.d.ts
+│   │   └── with-async-ittr.js
 │   ├── ieee754
 │   │   ├── LICENSE
 │   │   ├── README.md
@@ -5406,6 +5545,13 @@
 │   │   ├── dist
 │   │   ├── package.json
 │   │   └── yarn.lock
+│   ├── url-template
+│   │   ├── LICENSE
+│   │   ├── README.md
+│   │   ├── lib
+│   │   ├── package.json
+│   │   ├── test
+│   │   └── uritemplate-test
 │   ├── util-deprecate
 │   │   ├── History.md
 │   │   ├── LICENSE
@@ -5463,6 +5609,14 @@
 │   │   ├── es6
 │   │   ├── package.json
 │   │   └── ponyfill
+│   ├── web-vitals
+│   │   ├── LICENSE
+│   │   ├── README.md
+│   │   ├── attribution.d.ts
+│   │   ├── attribution.js
+│   │   ├── dist
+│   │   ├── package.json
+│   │   └── src
 │   ├── webidl-conversions
 │   │   ├── LICENSE.md
 │   │   ├── README.md
@@ -5681,6 +5835,7 @@
 │   │   ├── auth.js
 │   │   ├── db.js
 │   │   ├── email.js
+│   │   ├── firbase.js
 │   │   ├── queue.js
 │   │   └── utils.js
 │   ├── middleware
@@ -5695,8 +5850,9 @@
 │   └── utils
 │       └── constants.js
 ├── structure.txt
+├── stunnel.conf
 ├── styles
 │   └── global.css
 └── tailwind.config.mjs
 
-1529 directories, 4171 files
+1594 directories, 4262 files

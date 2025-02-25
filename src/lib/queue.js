@@ -5,7 +5,7 @@ import { PrismaClient } from '@prisma/client';
 const prisma = new PrismaClient();
 
 // Create a queue
-const emailQueue = new Bull('email', process.env.REDIS_URL, {
+const emailQueue = new Bull('email', process.env.UPSTASH_REDIS_URL, {
   settings: {
     retryProcessDelay: 5000,  // Retry failed jobs after 5 seconds
     maxJobRetries: 3,         // Max retries
